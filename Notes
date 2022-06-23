@@ -1,0 +1,6 @@
+Ask user for task fields
+For each loop to match input to tasks in ArrayList
+Add matched tasks to new ArrayList
+Use randomiser to pick task to complete
+
+if input for time is <10, multiply by 60 to convert to minutes

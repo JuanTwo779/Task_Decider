@@ -1,6 +1,7 @@
 public class Task
 {
     private String title;
+    private String desc;
     private int taskTime;
     private int mentalCap;
     private int physicalCap;
@@ -10,17 +11,24 @@ public class Task
     public Task()
     {
         title = "unknown";
+        desc = "unknown";
         taskTime = 0;
         mentalCap = 0;
         physicalCap = 0;
     }
 
-    public Task(String title, int taskTime, int mentalCap, int physicalCap)
+    public Task(String title, String desc, int taskTime, int mentalCap, int physicalCap)
     {
         this.title = title;
+        this.desc = desc;
         this.taskTime = taskTime;
         this.mentalCap = mentalCap;
         this.physicalCap = physicalCap;
+    }
+
+    public void setDesc(String desc)
+    {
+        this.desc = desc;
     }
 
     public void setTaskWork(int taskWork){
@@ -33,6 +41,11 @@ public class Task
 
     public void setTitle(String title){
         this.title = title;
+    }
+
+    public String getDesc()
+    {
+        return this.desc;
     }
 
     public int getMentalCap()
@@ -53,8 +66,9 @@ public class Task
     public String display()
     {
         return "Task name: " + title +
+                "\nTask description: " + desc +
                 "\nMental capacity required: " + mentalCap +
-                "\nPhysical capcity required: " + physicalCap +
+                "\nPhysical capacity required: " + physicalCap +
                 "\nTime required for completion: " + taskTime;
     }
 
