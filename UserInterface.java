@@ -17,16 +17,16 @@ public class UserInterface
     public int mentalCap()
     {
         Input objInput = new Input();
-        int taskTime = 0;
-        taskTime = objInput.acceptIntInput("What is your current mental capacity? (1 - 100)");
-        return taskTime;
+        int mentalCap = 0;
+        mentalCap = objInput.acceptIntInput("What is your current mental capacity? (1 - 100)");
+        return mentalCap;
     }
 
     public int physicalCap()
     {
         Input objInput = new Input();
-        int taskTime = 0;
-        taskTime = objInput.acceptIntInput("What is your current physical capacity? (1 - 100)");
-        return taskTime;
+        int physicalCap = 0;
+        physicalCap = objInput.acceptIntInput("What is your current physical capacity? (1 - 100)");
+        return physicalCap;
     }
 }
