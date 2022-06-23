@@ -8,6 +8,9 @@ public class Decider
         welcome();
     }
 
+    /*
+    Show time and date + welcome user
+     */
     public static void welcome()
     {
         System.out.println("______________________________________");
