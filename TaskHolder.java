@@ -65,6 +65,16 @@ public class TaskHolder
                 60, 20, 95);
         Tasks.add(abs);
 
+        Task cardio = new Task("Cardio",
+                "Walk, bike, high knew taps, star jumps",
+                60, 10, 75);
+        Tasks.add(cardio);
+
+        Task swim = new Task("Swim",
+                "Drive to swimming pool; warm ups and sprints",
+                150, 30, 90);
+        Tasks.add(swim);
+
         return Tasks;
     }
 }
