@@ -4,3 +4,6 @@ Add matched tasks to new ArrayList
 Use randomiser to pick task to complete
 
 if input for time is <10, multiply by 60 to convert to minutes
+
+
+convert to android app on completion
