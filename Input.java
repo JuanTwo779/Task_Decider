@@ -1,9 +1,8 @@
 import java.util.Scanner;
 
 public class Input {
-    public Input()
-    {
-    }
+
+    public Input() {}
 
     public int acceptIntInput(String message)
     {
@@ -19,7 +18,26 @@ public class Input {
             catch (Exception e)
             {
                 System.out.println("Input must be an integer and cannot be blank");
-                input = -1; //reset input to -1 to restart the loop
+                input = -1;
+            }
+        }
+        return input;
+    }
+
+    public String acceptStringInput(String message) {
+        Scanner console = new Scanner(System.in);
+        String input = "";
+        int flag = 0;
+        while (flag < 0) //loop until valid integer
+        {
+            System.out.println(message);
+            try //try,catch to ensure integer is valid
+            {
+                input = console.nextLine();
+                flag = 1;
+            } catch (Exception e) {
+                System.out.println("Input must be a string and cannot be blank");
+                flag = -1;
             }
         }
         return input;
