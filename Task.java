@@ -63,13 +63,23 @@ public class Task
         return this.title;
     }
 
-    public String display()
-    {
-        return "Task name: " + title +
-                "\nTask description: " + desc +
-                "\nMental capacity required: " + mentalCap +
-                "\nPhysical capacity required: " + physicalCap +
-                "\nTime required for completion: " + taskTime;
-    }
+//    public String display()
+//    {
+//        return "Task name: " + title +
+//                "\nTask description: " + desc +
+//                "\nMental capacity required: " + mentalCap +
+//                "\nPhysical capacity required: " + physicalCap +
+//                "\nTime required for completion: " + taskTime;
+//    }
 
+    @Override
+    public String toString() {
+        return "Task{" +
+                "title='" + title + '\'' +
+                ", desc='" + desc + '\'' +
+                ", taskTime=" + taskTime +
+                ", mentalCap=" + mentalCap +
+                ", physicalCap=" + physicalCap +
+                '}';
+    }
 }
