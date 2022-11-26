@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class UserInterface
 {
@@ -13,8 +14,8 @@ public class UserInterface
         tasks = new ArrayList<>();
     }
 
-    //Decide
-    //ask user for spare time, mental and physical capacity
+    //1. Decide which task
+    //Get time
     private int time()
     {
         int taskTime = 0;
@@ -22,6 +23,10 @@ public class UserInterface
         return taskTime;
     }
 
+    private Supplier<Integer> getUserTime = () ->
+            objInput.acceptIntInput("What is your current physical capacity? (1 - 100)");
+
+    //Get Mental
     private int mentalCap()
     {
         int mentalCap = 0;
@@ -29,6 +34,10 @@ public class UserInterface
         return mentalCap;
     }
 
+    private Supplier<Integer> getUserMental = () ->
+            objInput.acceptIntInput("What is your current physical capacity? (1 - 100)");
+
+    //Get physical
     private int physicalCap()
     {
         int physicalCap = 0;
@@ -36,13 +45,15 @@ public class UserInterface
         return physicalCap;
     }
 
-    //Add new task
+    private Supplier<Integer> getUserPhysical = () ->
+            objInput.acceptIntInput("What is your current physical capacity? (1 - 100)");
+
+
+
+    //2. Add new task
     private void addTask(){
-        String name = "";
-        String desc = "";
-        Integer time = 0;
-        Integer mental = 0;
-        Integer physical = 0;
+        String name, desc = "";
+        Integer time, mental, physical = 0;
 
         name = objInput.acceptStringInput("Enter to the name of the new task!");
         desc = objInput.acceptStringInput("Enter a short description of the new task");
@@ -53,4 +64,7 @@ public class UserInterface
         newTask = new Task(name, desc, time, mental, physical);
         tasks.add(newTask);
     }
+
+
+    //3. Display list
 }
