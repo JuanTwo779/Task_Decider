@@ -2,14 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
-public class UserInterface
+public class UserMethods
 {
 
     private List<Task> tasks;
     private Input objInput = new Input();
     private Task newTask;
 
-    public UserInterface()
+    public UserMethods()
     {
         tasks = new ArrayList<>();
     }
